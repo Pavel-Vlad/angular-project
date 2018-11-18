@@ -9,7 +9,6 @@ import {Emoji} from './emoji';
     providedIn: 'root'
 })
 export class HttpService {
-    emojisAll: Emoji[] = [];
 
     constructor(private http: HttpClient) {
     }
@@ -20,10 +19,5 @@ export class HttpService {
                 return data;
             })
         );
-    }
-
-    getAll() {
-        return this.getData()
-            .subscribe(all => this.emojisAll = all);
     }
 }
