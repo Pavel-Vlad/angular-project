@@ -6,11 +6,17 @@ import {AppComponent} from './app.component';
 import {EmojiListComponent} from './emoji-list/emoji-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpService} from './http.service';
+import { EmojiLikeComponent } from './emoji-like/emoji-like.component';
+import { EmojiDelComponent } from './emoji-del/emoji-del.component';
+import { EmojiAllComponent } from './emoji-all/emoji-all.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        EmojiListComponent
+        EmojiListComponent,
+        EmojiLikeComponent,
+        EmojiDelComponent,
+        EmojiAllComponent
     ],
     imports: [
         BrowserModule,
