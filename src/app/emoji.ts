@@ -1,4 +1,3 @@
 export interface Emoji {
-    key: string;
-    value: string;
+    [key: string]: string;
 }
