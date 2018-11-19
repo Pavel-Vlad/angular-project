@@ -21,4 +21,15 @@ export class HttpService {
             })
         );
     }
+
+    getListAll() {
+        this.getData()
+            .subscribe(
+                data => {
+                    this.listAll = data;
+                    console.log(this.listAll);
+                    return this.listAll;
+                }
+            );
+    }
 }
