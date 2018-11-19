@@ -9,13 +9,14 @@ import {Emoji} from './emoji';
     providedIn: 'root'
 })
 export class HttpService {
+    listAll: Emoji[] = [];
 
     constructor(private http: HttpClient) {
     }
 
     getData(): Observable<Emoji[]> {
-        return this.http.get<Emoji[]>('https://api.github.com/emojis').pipe(
-            map(data => {
+        return this.http.get('https://api.github.com/emojis').pipe(
+            map((data: any) => {
                 return data;
             })
         );
