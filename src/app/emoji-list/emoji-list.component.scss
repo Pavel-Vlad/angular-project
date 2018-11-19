@@ -1,0 +1,28 @@
+table {
+  text-align: center;
+  width: 100%;
+  thead tr th {
+    padding: 15px 0 15px 0;
+  }
+  tr {
+    border-bottom: 1px solid darkgrey;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 12px;
+  }
+  .btnDel:hover {
+    background-color: #bed1ff;
+    border-radius: 10px;
+  }
+}
+

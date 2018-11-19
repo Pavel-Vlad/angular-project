@@ -1,33 +1,29 @@
-<!--
 <table>
-  <thead>
-  <tr>
-    <th>Имя</th>
-    <th>Ссылка</th>
-    <th>Превью</th>
-    <th>Действия</th>
-  </tr>
-  </thead>
-  <tbody *ngFor="let item of emojis | keyvalue; index as i">
-  <tr>
-    <td>
-      {{ item.key}}
-    </td>
-    <td #emojiLink>
-      {{item.value}}
-    </td>
-    <td align="center">
-      <img height="50px" width="50px" src={{item.value}} alt="" style="cursor: pointer">
-    </td>
-    <td>
-      <div class="text-center">
-        <button style="background-color: aqua">*</button>
-        <button>X</button>
-      </div>
-    </td>
-  </tr>
-  </tbody>
-</table>-->
-<ul>
-    <li>элементы списка</li>
-</ul>
+    <thead>
+    <tr>
+        <th width="10%">Имя</th>
+        <th>Ссылка</th>
+        <th width="15%">Превью</th>
+        <th width="15%">Действия</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of list | keyvalue; let ind = index">
+    <tr >
+        <td>
+            {{item.key}}
+        </td>
+        <td>
+            {{item.value}}
+        </td>
+        <td align="center">
+            <img height="50px" width="50px" src={{item.value}} alt="" style="cursor: pointer">
+        </td>
+        <td>
+            <div class="text-center actions">
+                <a *ngIf="showLikeButton" (click)="setLike(item.key, item.value)"><img src="{{srcIcon}}"></a>
+                <a class="btnDel" (click)="delFunc(item.key, item.value)">{{textButton}}</a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>

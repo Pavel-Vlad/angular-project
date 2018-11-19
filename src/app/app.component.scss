@@ -1,3 +1,27 @@
-a.active {
-  color: brown;
+.all {
+  display: flex;
+}
+.left-side a {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: darkcyan;
+  &:hover {
+    text-decoration: none;
+  }
+  &.active {
+    color: brown;
+  }
+}
+.right-side {
+  width: 100%;
+  padding-left: 20px;
+  border-left: 1px solid darkgrey;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  input {
+    padding-left: 10px;
+  }
 }

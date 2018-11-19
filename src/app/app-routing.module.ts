@@ -5,9 +5,9 @@ import {EmojiDelComponent} from './emoji-del/emoji-del.component';
 import {EmojiAllComponent} from './emoji-all/emoji-all.component';
 
 const routes: Routes = [
-    {path: 'all', component: EmojiAllComponent},
-    {path: 'like', component: EmojiLikeComponent},
-    {path: 'del', component: EmojiDelComponent},
+    {path: 'all', component: EmojiAllComponent, data: {title: 'Все'}/*, resolve: {allList: httpService}*/},
+    {path: 'like', component: EmojiLikeComponent, data: {title: 'Любимые'}},
+    {path: 'del', component: EmojiDelComponent, data: {title: 'Удаленные'}},
     {path: '', redirectTo: '/all', pathMatch: 'full'}
 ];
 

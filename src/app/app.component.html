@@ -1,39 +1,23 @@
-<!--
-<table>
-    <thead>
-    <tr>
-        <th>Имя</th>
-        <th>Ссылка</th>
-        <th>Превью</th>
-        <th>Действия</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="">
-        <td>
-            {{emojis[0]}}
-        </td>
-        <td #emojiLink>
-            {{value}}
-        </td>
-        <td align="center">
-            <img height="50px" width="50px" src={{item.value}} alt="" style="cursor: pointer">
-        </td>
-        <td>
-            <div class="text-center">
-                <button style="background-color: aqua">*</button>
-                <button>X</button>
+<div class="all">
+    <nav class="left-side">
+        <ul>
+            <li><a routerLink="/all" routerLinkActive="active" >Все</a></li>
+            <li><a routerLink="/like" routerLinkActive="active">Любимые</a></li>
+            <li><a routerLink="/del" routerLinkActive="active">Удаленные</a></li>
+        </ul>
+    </nav>
+    <div class="right-side">
+        <header class="header">
+            <h2>{{title}}</h2>
+            <div class="search">
+                <input type="text" placeholder="Поиск ... ">
             </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
--->
-<nav>
-    <a routerLink="/all" routerLinkActive="active">Все</a>
-    <a routerLink="/like" routerLinkActive="active">Любимые</a>
-    <a routerLink="/del" routerLinkActive="active">Удаленные</a>
-</nav>
+        </header>
 
-<router-outlet></router-outlet>
+        <router-outlet></router-outlet>
+
+    </div>
+</div>
+
+
 
