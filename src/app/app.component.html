@@ -1,9 +1,9 @@
 <div class="all">
     <nav class="left-side">
         <ul>
-            <li><a routerLink="/all" routerLinkActive="active" >Все</a></li>
-            <li><a routerLink="/like" routerLinkActive="active">Любимые</a></li>
-            <li><a routerLink="/del" routerLinkActive="active">Удаленные</a></li>
+            <li><a routerLink="/all" routerLinkActive="active" (click)="setTitle('Все')">Все</a></li>
+            <li><a routerLink="/like" routerLinkActive="active" (click)="setTitle('Любимые')">Любимые</a></li>
+            <li><a routerLink="/del" routerLinkActive="active" (click)="setTitle('Удаленные')">Удаленные</a></li>
         </ul>
     </nav>
     <div class="right-side">

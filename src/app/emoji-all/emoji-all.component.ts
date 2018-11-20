@@ -8,14 +8,15 @@ import {HttpService} from '../http.service';
     styleUrls: ['./emoji-all.component.scss']
 })
 export class EmojiAllComponent implements OnInit {
-    state: string = 'all';
+    listLike: Emoji;
     list: Emoji;
 
-    constructor(private service: HttpService) {
+    constructor(private httpService: HttpService) {
     }
 
     ngOnInit() {
-        this.list = this.service.listAll;
+        this.list = this.httpService.listAll;
+        this.listLike = this.httpService.listLike;
+        console.log('this EmojiAllComponent OnInit');
     }
-
 }

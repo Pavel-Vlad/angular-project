@@ -7,8 +7,8 @@
         <th width="15%">Действия</th>
     </tr>
     </thead>
-    <tbody *ngFor="let item of list | keyvalue; let ind = index">
-    <tr >
+    <tbody *ngFor="let item of list | keyvalue; let i = index">
+    <tr *ngIf="(i<50)">
         <td>
             {{item.key}}
         </td>
@@ -16,11 +16,17 @@
             {{item.value}}
         </td>
         <td align="center">
-            <img height="50px" width="50px" src={{item.value}} alt="" style="cursor: pointer">
+            <div class="img" >
+                <img src={{item.value}} class="img-fluid">
+                <div class="img__big">
+                    <img src={{item.value}}>
+                </div>
+            </div>
         </td>
         <td>
             <div class="text-center actions">
-                <a *ngIf="showLikeButton" (click)="setLike(item.key, item.value)"><img src="{{srcIcon}}"></a>
+                <a class="btnLike" *ngIf="showLikeButton" (click)="setLike(item.key, item.value)"><img
+                        src="{{(listLike[item.key])? srcIconLike : srcIcon}}"></a>
                 <a class="btnDel" (click)="delFunc(item.key, item.value)">{{textButton}}</a>
             </div>
         </td>

@@ -1,4 +1,4 @@
-import {BrowserModule} from '@angular/platform-browser';
+import {BrowserModule, Title} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -23,7 +23,7 @@ import { EmojiAllComponent } from './emoji-all/emoji-all.component';
         AppRoutingModule,
         HttpClientModule
     ],
-    providers: [HttpService],
+    providers: [HttpService, Title],
     bootstrap: [AppComponent]
 })
 export class AppModule {

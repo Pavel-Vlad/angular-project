@@ -25,16 +25,6 @@ export class HttpService {
         );
     }
 
-    getListAll() {
-        this.getData()
-            .subscribe(
-                data => {
-                    this.listAll = data;
-                    return this.listAll;
-                }
-            );
-    }
-
     addListLike(k, v) {
         this.listLike[k] = v;
     }
