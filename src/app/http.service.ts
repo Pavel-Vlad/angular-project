@@ -1,28 +1,20 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {map} from 'rxjs/operators';
-import {Observable} from 'rxjs';
-import {Emoji} from './emoji';
-
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class HttpService {
-    listAll: Emoji = {};
-    listLike: Emoji = {};
-    listDel: Emoji = {};
+    listAll = {};
+    listLike = {};
+    listDel = {};
 
     constructor(private http: HttpClient) {
     }
 
-    getData(): Observable<Emoji> {
-        return this.http.get<Emoji>('https://api.github.com/emojis').pipe(
-            map((data) => {
-                return data;
-            })
-        );
+    getData() {
+        return this.http.get('https://api.github.com/emojis');
     }
 
     addListLike(k, v) {
