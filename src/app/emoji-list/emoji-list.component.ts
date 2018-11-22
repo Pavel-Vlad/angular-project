@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HttpService} from '../http.service';
-import {Emoji} from '../emoji';
 
 @Component({
     selector: 'app-emoji-list',
@@ -8,8 +7,8 @@ import {Emoji} from '../emoji';
     styleUrls: ['./emoji-list.component.scss']
 })
 export class EmojiListComponent implements OnInit {
-    @Input() list: Emoji;
-    @Input() listLike: Emoji;
+    @Input() list: object;
+    @Input() listLike: object;
     @Input() showLikeButton = true;
     @Input() textButton = 'Удалить';
     @Input() state: string;

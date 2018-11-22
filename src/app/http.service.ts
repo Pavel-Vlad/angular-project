@@ -6,9 +6,9 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class HttpService {
-    listAll = {};
-    listLike = {};
-    listDel = {};
+    listAll: object;
+    listLike: object = {};
+    listDel: object = {};
 
     constructor(private http: HttpClient) {
     }

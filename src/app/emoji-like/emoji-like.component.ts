@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../http.service';
-import {Emoji} from '../emoji';
 
 @Component({
     selector: 'app-emoji-like',
@@ -8,7 +7,7 @@ import {Emoji} from '../emoji';
     styleUrls: ['./emoji-like.component.scss']
 })
 export class EmojiLikeComponent implements OnInit {
-    list: Emoji;
+    list: object;
 
     constructor(private service: HttpService) {
     }

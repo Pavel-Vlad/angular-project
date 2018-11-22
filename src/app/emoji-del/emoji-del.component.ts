@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Emoji} from '../emoji';
+import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../http.service';
 
 @Component({
@@ -8,7 +7,7 @@ import {HttpService} from '../http.service';
     styleUrls: ['./emoji-del.component.scss']
 })
 export class EmojiDelComponent implements OnInit {
-    list: Emoji;
+    list: object;
     textButton = 'Восстановить';
     state = 'del';
 
