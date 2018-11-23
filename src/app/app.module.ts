@@ -9,6 +9,7 @@ import {HttpService} from './http.service';
 import { EmojiLikeComponent } from './emoji-like/emoji-like.component';
 import { EmojiDelComponent } from './emoji-del/emoji-del.component';
 import { EmojiAllComponent } from './emoji-all/emoji-all.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { EmojiAllComponent } from './emoji-all/emoji-all.component';
         EmojiListComponent,
         EmojiLikeComponent,
         EmojiDelComponent,
-        EmojiAllComponent
+        EmojiAllComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
