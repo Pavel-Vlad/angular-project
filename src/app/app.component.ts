@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.httpService.getData().subscribe(
             data => {
-                this.httpService.listAll = data;
+                console.log(this.httpService.listAll = data);
             }
         );
         this.titleService.setTitle(this.title);
